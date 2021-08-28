@@ -9,7 +9,7 @@ var uppercaseConfirm;
 var numberConfirm;
 var lowercaseConfirm;
 var specialCharConfirm;
-
+var finalPass = []
 
 function userInput (){
 characterAmount = window.prompt("How many characters do you want your password to have?");
@@ -55,6 +55,12 @@ function generatePassword(){
   console.log(numberConfirm)
   console.log(specialCharConfirm)  
   console.log(finalArray)  
+  
+  for(var i = 0; i < characterAmount; i++) {
+  finalPass.push(finalArray[Math.floor(Math.random() * finalArray.length)]);
+  }
+  return [finalPass.join('')]
+  
 } 
 
 

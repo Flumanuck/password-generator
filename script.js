@@ -22,14 +22,8 @@ specialCharConfirm = window.confirm("Do you want special characters? (eg: @,!,#,
 else{
   window.alert("Please type a valid number.");
   userInput();
+  }
 }
-}
-
-
-
-
-
-
 
 function generatePassword(){
   userInput();  
@@ -49,16 +43,11 @@ function generatePassword(){
   if(specialCharConfirm){
     specialCharacter.forEach(element => finalArray.push(element))
     };
-  console.log(characterAmount)
-  console.log(uppercaseConfirm)
-  console.log(lowercaseConfirm)
-  console.log(numberConfirm)
-  console.log(specialCharConfirm)  
-  console.log(finalArray)  
-  
+  // push generated elements to Finalpass
   for(var i = 0; i < characterAmount; i++) {
   finalPass.push(finalArray[Math.floor(Math.random() * finalArray.length)]);
   }
+  // Display joined elements in "#password"
   return [finalPass.join('')]
   
 } 
